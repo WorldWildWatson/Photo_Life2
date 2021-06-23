@@ -40,7 +40,7 @@ if ($like_count[0] != 0) {
     $stmt->bindValue(':photo_id', $photo_id, PDO::PARAM_INT);
     $stmt->bindValue(':id', $id, PDO::PARAM_INT);
     $status = $stmt->execute();
-    header("Location:like_button.php?thema_id=<?= $thema_id?>");
+    header("Location:like_button.php?thema_id=$thema_id");
 
 
 } else {
@@ -64,7 +64,7 @@ if ($status == false) {
     echo json_encode(["error_msg" => "{$error[2]}"]);
     exit();
 } else {
-    header("Location:like_button.php?thema_id=<?= $thema_id?>");
+    header("Location:like_button.php?thema_id=$thema_id");
     exit();
 }
 

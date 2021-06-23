@@ -49,12 +49,11 @@ if ($status == false) {
                 </td>
             </div>
             <div>
-                <button>submit</button>
+                <button>編集</button>
             </div>
             <input type="hidden" name="id" value="<?= $record["id"] ?>">
         </fieldset>
     </form>
-
 </body>
 
 </html>
